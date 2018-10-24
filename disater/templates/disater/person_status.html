@@ -1,0 +1,12 @@
+{% extends 'disater/base.html' %}
+
+{% block body %}
+
+<ul>
+    {% for person in all_persons %}
+        <li><a href="{% url 'details' person.id %}">{{ person }}</a></li>
+    {% endfor %}
+
+
+</ul>
+{% endblock %}
